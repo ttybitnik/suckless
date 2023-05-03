@@ -38,7 +38,7 @@ Dependency needed for my build to work correctly, as well as some suggested tool
 
 **** Main
 
-+ My [[#][dotfiles]]
++ My [[https://github.com/w0lper/dotfiles][dotfiles]]
 
 **** Suggestions
 
