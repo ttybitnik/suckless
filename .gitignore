@@ -1,0 +1,7 @@
+*.o
+*.orig
+dwm/dwm
+dwmblocks/dwmblocks
+dmenu/dmenu
+config.h
+blocks.h
