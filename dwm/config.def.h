@@ -158,7 +158,9 @@ static const Rule rules[] = {
 	RULE(.class = "Nautilus", .tags = 1 << 5)
 	RULE(.title = "Spotify", .tags = 1 << 3)
 	RULE(.class = "qBittorrent", .tags = 1 << 8)
-	RULE(.class = "Google-chrome", .tags = 1 <<2)
+	RULE(.class = "Google-chrome", .tags = 1 << 2)
+	RULE(.class = "discord", .tags = 1 << 4)
+	RULE(.class = "calibre", .tags = 1 << 7)
 };
 
 
@@ -241,7 +243,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_j,          rotatestack,            {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,          rotatestack,            {.i = -1 } },
 	{ MODKEY,                       XK_i,          incnmaster,             {.i = +1 } },
-	{ MODKEY,                       XK_d,          incnmaster,             {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_i,          incnmaster,             {.i = -1 } },
 	{ MODKEY,                       XK_h,          setmfact,               {.f = -0.05} },
 	{ MODKEY,                       XK_l,          setmfact,               {.f = +0.05} },
 	{ MODKEY,                       XK_Return,     zoom,                   {0} },
