@@ -29,8 +29,15 @@ List of features available in the source code and configuration files of this re
   + Rotate stack
   + Systray
   + Vanity gaps
+  + Centeredmaster
+  + Centeredwindowname
+  + Scratchpads
+  + Pertag
+  + Xrdb
 + Dmenu
+  + Xresources
 + Dwmblocks
++ Slock
 
 ** Dependencies
 
