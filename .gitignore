@@ -4,6 +4,7 @@ dwm/dwm
 dwmblocks/dwmblocks
 dmenu/dmenu
 dmenu/stest
+st/st
 slock/slock
 config.h
 blocks.h
