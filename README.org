@@ -125,7 +125,7 @@ To use dwm, dmenu, dwmblocks, st, and slock, simply launch them from your termin
 
 *** Configuration
 
-After installing dwm, dmenu, and dwmblocks, you can customize their configuration by editing the corresponding =config.h= files. You can find these files in the =dwm/=, =dmenu/=, and =dwmblocks/= directories, respectively.
+After installing dwm, dmenu, dwmblocks, st, and slock, you can customize their configuration by editing the corresponding =config.h= files. You can find these files in the =dwm/=, =dmenu/=, and =dwmblocks/= directories, respectively.
 
 Here are some examples of configurations you can modify:
 
