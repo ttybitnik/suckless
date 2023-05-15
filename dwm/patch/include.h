@@ -13,10 +13,15 @@
 
 /* Other patches */
 #include "autostart.h"
+#include "dwmc.h"
+#include "pertag.h"
 #include "rotatestack.h"
+#include "scratchpad.h"
 #include "vanitygaps.h"
 #include "xrdb.h"
 /* Layouts */
+#include "layout_centeredmaster.h"
+#include "layout_centeredfloatingmaster.h"
 #include "layout_monocle.h"
 #include "layout_tile.h"
 

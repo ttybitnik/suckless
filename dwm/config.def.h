@@ -30,45 +30,45 @@ static const char dmenufont[]            = "iosevka medium extended:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#22222e";
+static char normfgcolor[]                = "#ebdbb2";
+static char normbgcolor[]                = "#282828";
+static char normbordercolor[]            = "#928374";
+static char normfloatcolor[]             = "#928374";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#723e31";
-static char selbordercolor[]             = "#723e31";
-static char selfloatcolor[]              = "#723e31";
+static char selfgcolor[]                 = "#fbf1c7";
+static char selbgcolor[]                 = "#98971a";
+static char selbordercolor[]             = "#98971a";
+static char selfloatcolor[]              = "#ebdbb2";
 
-static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#222222";
-static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#22222e";
+static char titlenormfgcolor[]           = "#ebdbb2";
+static char titlenormbgcolor[]           = "#282828";
+static char titlenormbordercolor[]       = "#928374";
+static char titlenormfloatcolor[]        = "#ebdbb2";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#723e31";
-static char titleselbordercolor[]        = "#723e31";
-static char titleselfloatcolor[]         = "#723e31";
+static char titleselfgcolor[]            = "#fbf1c7";
+static char titleselbgcolor[]            = "#282828";
+static char titleselbordercolor[]        = "#98971a";
+static char titleselfloatcolor[]         = "#ebdbb2";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#222222";
-static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#22222e";
+static char tagsnormfgcolor[]            = "#ebdbb2";
+static char tagsnormbgcolor[]            = "#282828";
+static char tagsnormbordercolor[]        = "#928374";
+static char tagsnormfloatcolor[]         = "#ebdbb2";
 
-static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#723e31";
-static char tagsselbordercolor[]         = "#723e31";
-static char tagsselfloatcolor[]          = "#723e31";
+static char tagsselfgcolor[]             = "#fbf1c7";
+static char tagsselbgcolor[]             = "#98971a";
+static char tagsselbordercolor[]         = "#98971a";
+static char tagsselfloatcolor[]          = "#ebdbb2";
 
-static char hidnormfgcolor[]             = "#723e31";
-static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
+static char hidnormfgcolor[]             = "#928374";
+static char hidselfgcolor[]              = "#fbf1c7";
+static char hidnormbgcolor[]             = "#282828";
+static char hidselbgcolor[]              = "#98971a";
 
-static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
-static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#22222e";
+static char urgfgcolor[]                 = "#fbf1c7";
+static char urgbgcolor[]                 = "#cc241d";
+static char urgbordercolor[]             = "#cc241d";
+static char urgfloatcolor[]              = "#cc241d";
 
 
 
@@ -89,6 +89,14 @@ static char *colors[][ColCount] = {
 
 
 
+const char *spcmd1[] = {"st", "-n", "spsterm", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "speuterpe", "-g", "120x34", "-e", "euterpe", NULL };
+
+static Sp scratchpads[] = {
+   /* name          cmd  */
+   {"spsterm",      spcmd1},
+   {"speuterpe",    spcmd2},
+};
 
 /* Tags
  * In a traditional dwm the number of tags in use can be changed simply by changing the number
@@ -159,8 +167,11 @@ static const Rule rules[] = {
 	RULE(.title = "Spotify", .tags = 1 << 3)
 	RULE(.class = "qBittorrent", .tags = 1 << 8)
 	RULE(.class = "Google-chrome", .tags = 1 << 2)
+	RULE(.class = "Firefox-esr", .tags = 1 << 2)	
 	RULE(.class = "discord", .tags = 1 << 4)
 	RULE(.class = "calibre", .tags = 1 << 7)
+	RULE(.instance = "spsterm", .tags = SPTAG(0), .isfloating = 1)
+	RULE(.instance = "speuterpe", .tags = SPTAG(1), .isfloating = 1)	
 };
 
 
@@ -187,7 +198,7 @@ static const BarRule barrules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -199,6 +210,8 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
 };
 
 
@@ -270,10 +283,21 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
+	{ MODKEY,                       XK_u,          setlayout,              {.v = &layouts[3]} },
+	{ MODKEY,                       XK_o,          setlayout,              {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,      setlayout,              {0} },
 	{ MODKEY|ShiftMask,             XK_space,      togglefloating,         {0} },
-	{ MODKEY,                       XK_0,          view,                   {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,          tag,                    {.ui = ~0 } },
+	{ MODKEY,                       XK_r,          togglescratch,          {.ui = 0 } },
+	{ MODKEY|ControlMask,           XK_r,          setscratch,             {.ui = 0 } },
+	{ MODKEY|ShiftMask,             XK_r,          removescratch,          {.ui = 0 } },
+	{ MODKEY,                       XK_s,          togglescratch,          {.ui = 1 } },
+	{ MODKEY|ControlMask,           XK_s,          setscratch,             {.ui = 1 } },
+	{ MODKEY|ShiftMask,             XK_s,          removescratch,          {.ui = 1 } },
+	{ MODKEY,                       XK_w,          togglescratch,          {.ui = 2 } },
+	{ MODKEY|ControlMask,           XK_w,          setscratch,             {.ui = 2 } },
+	{ MODKEY|ShiftMask,             XK_w,          removescratch,          {.ui = 2 } },	
+	{ MODKEY,                       XK_0,          view,                   {.ui = ~SPTAGMASK } },
+	{ MODKEY|ShiftMask,             XK_0,          tag,                    {.ui = ~SPTAGMASK } },
 	{ MODKEY,                       XK_comma,      focusmon,               {.i = -1 } },
 	{ MODKEY,                       XK_period,     focusmon,               {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,      tagmon,                 {.i = -1 } },
@@ -309,4 +333,45 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,              Button3,        toggletag,      {0} },
 };
 
+/* signal definitions */
+/* signum must be greater than 0 */
+/* trigger signals using `xsetroot -name "fsignal:<signame> [<type> <value>]"` */
+static const Signal signals[] = {
+	/* signum                    function */
+	{ "focusstack",              focusstack },
+	{ "setmfact",                setmfact },
+	{ "togglebar",               togglebar },
+	{ "incnmaster",              incnmaster },
+	{ "togglefloating",          togglefloating },
+	{ "focusmon",                focusmon },
+	{ "rotatestack",             rotatestack },
+	{ "tagmon",                  tagmon },
+	{ "zoom",                    zoom },
+	{ "incrgaps",                incrgaps },
+	{ "incrigaps",               incrigaps },
+	{ "incrogaps",               incrogaps },
+	{ "incrihgaps",              incrihgaps },
+	{ "incrivgaps",              incrivgaps },
+	{ "incrohgaps",              incrohgaps },
+	{ "incrovgaps",              incrovgaps },
+	{ "togglegaps",              togglegaps },
+	{ "defaultgaps",             defaultgaps },
+	{ "setgaps",                 setgapsex },
+	{ "view",                    view },
+	{ "viewall",                 viewallex },
+	{ "viewex",                  viewex },
+	{ "toggleview",              toggleview },
+	{ "toggleviewex",            toggleviewex },
+	{ "tag",                     tag },
+	{ "tagall",                  tagallex },
+	{ "tagex",                   tagex },
+	{ "toggletag",               toggletag },
+	{ "toggletagex",             toggletagex },
+	{ "togglescratch",           togglescratch },
+	{ "killclient",              killclient },
+	{ "xrdb",                    xrdb },
+	{ "quit",                    quit },
+	{ "setlayout",               setlayout },
+	{ "setlayoutex",             setlayoutex },
+};
 
