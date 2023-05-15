@@ -34,7 +34,7 @@ List of features available in the source code and configuration files of this re
 | *dmenu*     | xresources     |                        |                    |             |
 | *st*        | xresources     | xresources reload      | alpha              | visualbell  |
 |             | scrollback     | scrollback mouse       |                    |             |
-| *st*        | dpms           |                        |                    |             |
+| *slock*     | dpms           |                        |                    |             |
 
 ** Dependencies
 
