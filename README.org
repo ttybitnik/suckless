@@ -47,7 +47,7 @@ Dependencies needed for my build to work correctly, as well as some suggested to
 
 **** Suggestions
 
-+ Qutebrowser
++ Lynx
 + Nitrogen
 + Ytfzf
 + Yt-dlp
@@ -57,6 +57,7 @@ Dependencies needed for my build to work correctly, as well as some suggested to
 + Xclip
 + Pulsemixer
 + Redshift
++ Spotify-tui
 
 ** Instructions
 *** Prerequisites
