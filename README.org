@@ -1,4 +1,4 @@
-#+TITLE: Suckless.w0lper	
+#+TITLE: Suckless.ttybitnik
 #+AUTHOR: Vinicius Moraes
 #+EMAIL: vinicius.moraes@eternodevir.com
 #+OPTIONS: num:nil
@@ -27,14 +27,15 @@ This repository contains the source code and configuration files for my suckless
 
 List of features available in the source code and configuration files of this repository:
 
-| *dwm*       | autostart      | rotatestack            | centeredwindowname | vanity gaps |
-|             | centeredmaster | centeredfloatingmaster | pertag             | systray     |
-|             | xrdb           | dwmc                   | scratchpads        |             |
-| *dwmblocks* | statuscmd      |                        |                    |             |
-| *dmenu*     | xresources     |                        |                    |             |
-| *st*        | xresources     | xresources reload      | alpha              | visualbell  |
-|             | scrollback     | scrollback mouse       |                    |             |
-| *slock*     | dpms           |                        |                    |             |
+| *dwm*       | autostart      | rotatestack            | centeredwindowname |
+|             | centeredmaster | centeredfloatingmaster | pertag             |
+|             | xrdb           | vanity gaps            | systray            |
+|             | dwmc           | scratchpads            |                    |
+| *dwmblocks* | statuscmd      |                        |                    |
+| *dmenu*     | xresources     |                        |                    |
+| *st*        | xresources     | xresources reload      | alpha              |
+|             | scrollback     | scrollback mouse       | visualbell         |
+| *slock*     | dpms           |                        |                    |
 
 ** Dependencies
 
