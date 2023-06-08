@@ -2,21 +2,21 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
-  	{"", "vpn-bar",	  		        1,  	  	 0},
+  	{"", "vpn_bar",	  		        1,  	  	 0},
 	
-  	{"", "net-bar",	  		        1,  	  	 0},
+  	{"", "net_bar",	  		        1,  	  	 0},
 
-	{" ", "ram-bar",			5,  	  	 0},
+	{" ", "ram_bar",			5,  	  	 0},
 
-	{" ", "cpu-bar",			5,   	         0},
+	{" ", "cpu_bar",			5,   	         0},
 	
- 	{" ", "volume-bar",                    0,	         5},
+ 	{" ", "volume_bar",                    0,	         5},
 
-	//{"", "battery-bar",		        3600,		 0},
+	//{"", "battery_bar",		        3600,		 0},
 	
-       	{" ", "weather-bar",		        3600,		 0},
+       	{" ", "weather_bar",		        3600,		 0},
 	
-	{" ", "clock-bar",		        60,		 0},
+	{" ", "clock_bar",		        60,		 0},
 
 };
 
