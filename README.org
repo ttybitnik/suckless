@@ -20,23 +20,19 @@ This repository contains the source code and configuration files for my suckless
 
 List of features available in the source code and configuration files of this repository:
 
-| *dwm*       | autostart      | rotatestack            | centeredwindowname |
-|             | centeredmaster | centeredfloatingmaster | pertag             |
-|             | xrdb           | vanity gaps            | systray            |
-|             | dwmc           | scratchpads            |                    |
-| *dwmblocks* | statuscmd      |                        |                    |
-| *dmenu*     | xresources     |                        |                    |
-| *st*        | xresources     | xresources reload      | alpha              |
-|             | scrollback     | scrollback mouse       | visualbell         |
-| *slock*     | dpms           |                        |                    |
+| *dwm*       | autostart, rotatestack, centeredwindowname, centeredmaster, centeredfloatingmaster, pertag, xrdb, vanity gaps, systray, dwmc, scratchpads |
+| *dwmblocks* | statuscmd                                                                                                                                 |
+| *dmenu*     | xresources                                                                                                                                |
+| *st*        | xresources, xresources reload, alpha, scrollback, scrollback mouse, visualbell                                                           |
+| *slock*     | dpms                                                                                                                                      |
 
 ** Dependencies
 
-Dependencies needed for my build to work correctly, as well as some suggested tools and applications: 
+Dependencies needed for my build to work correctly: 
 
 **** Main
 
-+ My [[https://github.com/w0lper/dotfiles][dotfiles]]
++ My [[https://github.com/ttybitnik/dotfiles][dotfiles]]
 + Xsettingsd
 
 ** Instructions
@@ -56,7 +52,7 @@ Before installing the suckless tools, make sure that you have the following prer
    #+begin_src shell
      mkdir -p ~/.config/suckless/
      cd ~/.config/suckless
-     git clone https://github.com/w0lper/suckless.git .
+     git clone https://github.com/ttybitnik/suckless.git .
    #+end_src
 
 2) Build and install dwm:
