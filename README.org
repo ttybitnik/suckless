@@ -23,12 +23,12 @@ List of features available in the source code and configuration files of this re
 | *dwm*       | autostart, rotatestack, centeredwindowname, centeredmaster, centeredfloatingmaster, pertag, xrdb, vanity gaps, systray, dwmc, scratchpads |
 | *dwmblocks* | statuscmd                                                                                                                                 |
 | *dmenu*     | xresources                                                                                                                                |
-| *st*        | xresources, xresources reload,, alpha, scrollback, scrollback mouse, visualbell                                                           |
+| *st*        | xresources, xresources reload, alpha, scrollback, scrollback mouse, visualbell                                                           |
 | *slock*     | dpms                                                                                                                                      |
 
 ** Dependencies
 
-Dependencies needed for my build to work correctly, as well as some suggested tools and applications: 
+Dependencies needed for my build to work correctly: 
 
 **** Main
 
