@@ -114,6 +114,6 @@ Here are some examples of configurations you can modify:
 
 ** License
 
-This project is licensed under the MIT License, unless an exception is made explicit in context.
+This project is licensed under the MIT License, *unless an exception is made explicit in context*.
 
 See the =LICENSE= files for more information.
