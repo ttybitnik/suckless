@@ -1,5 +1,5 @@
 #+TITLE: ttybitnik/suckless
-#+AUTHOR: Vinicius Moraes
+#+AUTHOR: Vinícius Moraes
 #+EMAIL: vinicius.moraes@eternodevir.com
 #+OPTIONS: num:nil
 
@@ -28,7 +28,7 @@ List of features available in the source code and configuration files of this re
 
 ** Dependencies
 
-Dependencies needed for my build to work correctly: 
+Dependencies needed for my build to work correctly:
 
 **** Main
 
@@ -98,7 +98,7 @@ To use dwm, dmenu, dwmblocks, st, and slock, simply launch them from your termin
 - To launch dmenu, press =ProprietaryKey p= to run the dwm =dmenu_run= command.
 - Dwmblocks is automatically loaded through my dwm's startup script when you launch dwm.
 - To launch st, press =ProprietaryKey y=.
-- To launch slock, run =slock= in dmenu. 
+- To launch slock, run =slock= in dmenu.
 
 *** Configuration
 
