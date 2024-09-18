@@ -5,17 +5,6 @@
 
 This repository contains the source code and configuration files for my suckless *dwm*, *dmenu*, *dwmblocks*, *st*, and *slock*. These are minimalist and lightweight tools designed for users who want a customizable and efficient system.
 
-**** Table of contents                                             :TOC_4:
-  - [[#features][Features]]
-  - [[#dependencies][Dependencies]]
-      - [[#main][Main]]
-  - [[#instructions][Instructions]]
-    - [[#prerequisites][Prerequisites]]
-    - [[#installation][Installation]]
-    - [[#usage][Usage]]
-    - [[#configuration][Configuration]]
-  - [[#license][License]]
-
 ** Features
 
 List of features available in the source code and configuration files of this repository:
@@ -30,13 +19,10 @@ List of features available in the source code and configuration files of this re
 
 Dependencies needed for my build to work correctly:
 
-**** Main
-
 + My [[https://github.com/ttybitnik/dotfiles][dotfiles]]
 + Xsettingsd
 
-** Instructions
-*** Prerequisites
+** Prerequisites
 
 Before installing the suckless tools, make sure that you have the following prerequisites installed:
 
@@ -46,7 +32,7 @@ Before installing the suckless tools, make sure that you have the following prer
 + =libxft-dev=
 + =libxinerama-dev=
 
-*** Installation
+** Installation
 
 1) Clone the repository:
    #+begin_src shell
@@ -90,7 +76,7 @@ Before installing the suckless tools, make sure that you have the following prer
      cd ..
    #+end_src
 
-*** Usage
+** Usage
 
 To use dwm, dmenu, dwmblocks, st, and slock, simply launch them from your terminal or from my dotfiles’ startup script.
 
@@ -100,7 +86,7 @@ To use dwm, dmenu, dwmblocks, st, and slock, simply launch them from your termin
 - To launch st, press =ProprietaryKey y=.
 - To launch slock, run =slock= in dmenu.
 
-*** Configuration
+** Configuration
 
 After installing dwm, dmenu, dwmblocks, st, and slock, you can customize their configuration by editing the corresponding =config.h= files. You can find these files in the =dwm/=, =dmenu/=, and =dwmblocks/= directories, respectively.
 
